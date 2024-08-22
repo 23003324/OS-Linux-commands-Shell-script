@@ -64,8 +64,7 @@ comm file1 file2
 
 diff file1 file2
 ## OUTPUT
-![Screenshot 2024-08-22 203842](https://github.com/user-attachments/assets/a0132ccc-b0df-41cb-9261-8ee5f2b33728)
-
+![Screenshot 2024-08-22 213358](https://github.com/user-attachments/assets/672024fe-23ff-4b5f-bd7e-2adf2645cea1)
 
 #Filters
 
