@@ -236,6 +236,7 @@ egrep 'Linux.*World' newfile
 egrep l{2} newfile
 ## OUTPUT
 
+![Screenshot 2024-08-25 160654](https://github.com/user-attachments/assets/93d948af-528a-4fe8-850d-1ea80778eb3d)
 
 
 egrep 's{1,2}' newfile
@@ -422,6 +423,7 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 tar -cvf backup.tar *
 ## OUTPUT
 
+![Screenshot 2024-08-25 155214](https://github.com/user-attachments/assets/823a3a52-0a68-4bdf-85bc-7aec659c2728)
 
 mkdir backupdir
  
@@ -429,10 +431,12 @@ mv backup.tar backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
+![Screenshot 2024-08-25 160112](https://github.com/user-attachments/assets/318769b6-675a-43b2-8c1e-e2f2575e092a)
 
 
 tar -xvf backup.tar
 ## OUTPUT
+![Screenshot 2024-08-25 160127](https://github.com/user-attachments/assets/89c952c5-559c-4b18-b81a-7b39491290e4)
 
 gzip backup.tar
 
@@ -452,7 +456,8 @@ chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
 
- 
+ ![Screenshot 2024-08-25 150944](https://github.com/user-attachments/assets/7c9bd5b3-ca87-4f7c-b36f-c5ae66db0b43)
+
 cat << stop > herecheck.txt
 ```
 hello in this world
@@ -463,6 +468,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+![Screenshot 2024-08-25 150955](https://github.com/user-attachments/assets/5f9bad4a-6f35-4528-8ee0-d8725fb576f3)
 
 
 cat < scriptest.sh 
@@ -501,26 +507,32 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
+![Screenshot 2024-08-25 164017](https://github.com/user-attachments/assets/6e6255f4-c575-44f2-991f-e07aadb0b405)
 
  
 ls file1
 ## OUTPUT
+![Screenshot 2024-08-25 164426](https://github.com/user-attachments/assets/9efeb4cb-fd16-4254-9ba9-302957c179d0)
 
 echo $?
 ## OUTPUT 
+![Screenshot 2024-08-25 164025](https://github.com/user-attachments/assets/cff33863-a40b-47f3-921b-edaacdde49d7)
+
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
- 
+ ![Screenshot 2024-08-25 164037](https://github.com/user-attachments/assets/24689d39-c0dc-4580-9ae9-b5e3d45efeac)
+
 abcd
  
 echo $?
  ## OUTPUT
 
 
- 
+ ![Screenshot 2024-08-25 164037](https://github.com/user-attachments/assets/0ff1a259-1224-411b-9e49-c911f675932f)
+
 # mis-using string comparisons
 
 cat < strcomp.sh 
