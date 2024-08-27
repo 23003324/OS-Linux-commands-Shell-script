@@ -507,7 +507,21 @@ chmod 777 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-![Screenshot 2024-08-25 164017](https://github.com/user-attachments/assets/6e6255f4-c575-44f2-991f-e07aadb0b405)
+```./scriptest.sh: line 1: #!/bin/sh: No such file or directory
+“File name is ./scriptest.sh ”
+File name is  scriptest.sh
+“First arg. is ” 1
+“Second arg. is ” 2
+“Third arg. is ” 3
+“Fourth arg. is ”
+The $@ is  1 2 3
+The $\# is  1#
+The $$ is  14337
+    PID TTY          TIME CMD
+  13614 pts/1    00:00:00 bash
+  14337 pts/1    00:00:00 bash
+  14340 pts/1    00:00:00 ps
+```
 
  
 ls file1
@@ -562,21 +576,7 @@ echo "$val1 is less than $val2"
 fi
 ```
 ##OUTPUT
-./scriptest.sh: line 1: #!/bin/sh: No such file or directory
-“File name is ./scriptest.sh ”
-File name is  scriptest.sh
-“First arg. is ” 1
-“Second arg. is ” 2
-“Third arg. is ” 3
-“Fourth arg. is ”
-The $@ is  1 2 3
-The $\# is  1#
-The $$ is  14337
-    PID TTY          TIME CMD
-  13614 pts/1    00:00:00 bash
-  14337 pts/1    00:00:00 bash
-  14340 pts/1    00:00:00 ps
-
+baseball is less than hockey
 
 
 chmod 755 strcomp.sh
@@ -610,7 +610,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-
+You are the owner of the /etc/passwd file
 # check if with file location
 cat>ifnested.sh 
 ```bash
@@ -656,9 +656,11 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
+```
 
-
-
+"/root The object exists, is it a file?"
+"No,/root it is not a file!"
+```
 # using numeric test comparisons
 cat > iftest.sh 
 ```bash
@@ -700,7 +702,11 @@ $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
 ##OUTPUT
-
+```
+“/home/sec The object exists, is it a file?”
+“No,/home/sec it is not a file!”
+“But /home/sec/.bash_history is a file!”
+```
 # check if a file
 cat > ifnested.sh 
 ```bash
