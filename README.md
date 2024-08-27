@@ -836,6 +836,10 @@ esac
 $ chmod 755 casecheck.sh 
  
 $ ./casecheck.sh 
+##OUTPUT
+```
+Sorry, you are not allowed here
+```
  
 cat > whiletest
 ```bash
@@ -851,7 +855,19 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
- 
+##OUTPUT
+```
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+```
  
 cat untiltest.sh 
 ```bash
@@ -864,6 +880,14 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
+##OUTPUT
+```
+./untiltest.sh: line 1: #using: command not found
+100
+75
+50
+25
+```
  
  
  
@@ -879,7 +903,17 @@ done
  
 $ chmod 755 forin1.sh
  
- 
+ ## OUTPUT
+ ```
+./forin1.sh: line 1: #!/bin/bash: No such file or directory
+./forin1.sh: line 2: #basic: command not found
+The next state is Alabama
+The next state is Alaska
+The next state is Arizona
+The next state is Arkansas
+The next state is California
+The next state is Colorado
+```
 cat forin2.sh 
 ```bash
 \#!/bin/bash
@@ -904,6 +938,12 @@ done
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
+## OUTPUT
+```
+“word:I”
+“word:dont know if thisll”
+“word:work”
+```
  
 cat forin3.sh 
 ```bash
@@ -915,6 +955,15 @@ echo "word:$test"
 done
 ```
 $ ./forin3.sh 
+## OUTPUT
+```
+word:I
+word:don't
+word:know
+word:if
+word:this'll
+word:work
+```
  
 cat forin1.sh 
 ```bash
@@ -928,6 +977,14 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+```
+The next state is Alabama
+The next state is Alaska
+The next state is Arizona
+The next state is Arkansas
+The next state is California
+The next state is Colorado
+```
 cat forinfile.sh 
 ```bash
 #!/bin/bash
@@ -939,6 +996,16 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
+##OUTPUT
+```
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+Visit beautiful cities
+```
 $ cat cities
 Hyderabad
 Alampur
@@ -963,6 +1030,13 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
+```
+The value is i is 1
+The value is i is 2
+The value is i is 3
+The value is i is 4
+The value is i is 5
+```
 
 cat forctype1.sh 
 ```bash
@@ -976,6 +1050,13 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
+```
+1 - 5
+2 - 4
+3 - 3
+4 - 2
+5 - 1
+```
 
 cat fornested1.sh 
 ```bash
@@ -994,6 +1075,20 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
+ ```
+Starting loop 1:
+ Inside loop: 1
+ Inside loop: 2
+ Inside loop: 3
+Starting Loop 2:
+ Inside loop: 1
+ Inside loop: 2
+ Inside loop: 3
+Starting Loop 3:
+ Inside loop: 1
+ Inside loop: 2
+ Inside loop: 3
+```
 
  
 cat forbreak.sh 
@@ -1011,6 +1106,11 @@ done
 echo "The for loop is completed“
 ```
 ## OUTPUT
+```
+Iteration number: 1
+Iteration number: 2
+The for loop is completed
+```
 
 $ chmod 755 forbreak.sh
  
@@ -1036,7 +1136,13 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
+ ```
+#!/bin/bash
+# testing the read command
+echo -n "Enter your name: "
+read name
+echo "Hello $name, welcome to my program. "
+```
 cat exread.sh 
 ```bash
 #!/bin/bash
@@ -1051,7 +1157,10 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
-
+```
+Enter your name: Haritharamesh
+Hello Haritharamesh , welcome to my program. 
+```
  cat exread1.sh
 ```bash
 #!/bin/bash
@@ -1062,7 +1171,10 @@ echo "Hello $name, welcome to my program. “
 $ chmod 755 exread1.sh 
 
 ## OUTPUT
-
+```
+Enter your name: Haritharamesh
+Hello Haritharamesh, welcome to my program.
+```
 
 
 $ ./exread1.sh 
@@ -1084,11 +1196,15 @@ fi
 ```
 ## OUTPUT
  ./funcex.sh 
-
+```
+Usage: badtest1 a b
+```
  
  ./funcex.sh 1 2
 
- 
+ ```
+The result is 2
+```
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1101,6 +1217,11 @@ $ chmod 777 argshift.sh
 
 ## OUTPUT
 $ ./argshift.sh 1 2 3
+```
+1
+2
+3
+```
  
  cat argshift1.sh
 ```bash
@@ -1118,6 +1239,11 @@ done
 $ chmod 777 argshift.sh
 ## OUTPUT
 $ ./argshift.sh 1 2 3
+```
+1
+2
+3
+```
  
 cat argshift.sh
 ```bash
@@ -1131,7 +1257,21 @@ set +x
 ```
 ## OUTPUT
  ./argshift.sh 1 2 3
- 
+ ```
++ ((  3  ))
++ echo 1 
+1
++ shift
++ ((  2  ))
++ echo 2
+2
++ shift
++ ((  1  ))
++ echo 3
++ shift
++ ((  0  ))
++ set +x
+```
  
 cat > nc.awk
 ```bash
@@ -1162,6 +1302,21 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
+```
+7         bcdfghj
+8	  abcdfghj
+7	  bcdfghj
+8  	  ebcdfghj
+7	  bcdfghhj
+8	  ibcdfghj
+7	  bcdfghj
+8	  obcdfghj
+7	  bcdfghj
+8 	  ubcdfghj
+total characters 75
+Number of Lines are 10
+No of Words count: 10
+```
  
 cat > palindrome.sh
 ```bash
@@ -1189,6 +1344,20 @@ else
 fi
 ```
 ## OUTPUT 
+```
+locathost:~# chmod 755 palindrome.sh
+locathost:~# ./palindrome.sh
+Enter the number
+21
+Number is NOT palindrome
+locathost:~# chmod 755 palindrome.sh
+locathost:~# ./palindrome.sh
+Enter the number
+33
+Number is palindrome
+locathost:~#
+
+```
 
 
 # RESULT:
