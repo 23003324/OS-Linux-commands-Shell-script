@@ -576,14 +576,18 @@ echo "$val1 is less than $val2"
 fi
 ```
 ##OUTPUT
+```
 baseball is less than hockey
+```
 
 
 chmod 755 strcomp.sh
  
 ./strcomp.sh 
 ## OUTPUT
-
+```
+You are the owner of the /etc/passwd file
+```
 
 # check file ownership
 cat < psswdperm.sh 
@@ -658,8 +662,11 @@ fi
 ## OUTPUT
 ```
 
-"/root The object exists, is it a file?"
-"No,/root it is not a file!"
+
+“/home/sec The object exists, is it a file?”
+“No,/home/sec it is not a file!”
+“But /home/sec/.bash_history is a file!”
+
 ```
 # using numeric test comparisons
 cat > iftest.sh 
@@ -703,9 +710,10 @@ $ chmod 755 iftest.sh
 $ ./iftest.sh 
 ##OUTPUT
 ```
-“/home/sec The object exists, is it a file?”
-“No,/home/sec it is not a file!”
-“But /home/sec/.bash_history is a file!”
+“The test value 10 is greater than 5”
+“The values are different”
+
+
 ```
 # check if a file
 cat > ifnested.sh 
