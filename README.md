@@ -614,7 +614,9 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
+```
 You are the owner of the /etc/passwd file
+```
 # check if with file location
 cat>ifnested.sh 
 ```bash
